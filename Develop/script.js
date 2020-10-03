@@ -27,5 +27,17 @@ function generatePassword() {
     passwordLength = prompt("How many characters do you want the password to be? The password cannot be less than 8 or greater than 128");
   }
 
+  var confirmLowerCase = confirm("Do you want to add lowercase on your password?");
+  var confirmUpperCase = confirm("Do you want to add uppercase on your password?");
+  var confirmNumber = confirm("Do you want to add numbers on your password?");
+  var confirmSpecialCharacter = confirm("Do you want to add special character on your password?");
+
+  if (confirmLowerCase === false && confirmLowerCase === false && confirmNumber === false && confirmSpecialCharacter === false) {
+    alert("Please choose one of the criteria provided to you!")
+    confirmLowerCase = confirm("Do you want to add lowercase on your password?");
+    confirmUpperCase = confirm("Do you want to add uppercase on your password?");
+    confirmNumber = confirm("Do you want to add numbers on your password?");
+    confirmSpecialCharacter = confirm("Do you want to add special character on your password?");
+  }
 
 }
