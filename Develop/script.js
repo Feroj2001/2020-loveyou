@@ -40,4 +40,26 @@ function generatePassword() {
     confirmSpecialCharacter = confirm("Do you want to add special character on your password?");
   }
 
+  if (confirmLowerCase) {
+    storingVar = storingVar.concat(lowerCaseCharacter)
+  }
+
+  if (confirmUpperCase) {
+    storingVar = storingVar.concat(upperCaseCharacter)
+  }
+
+  if (confirmNumber) {
+    storingVar = storingVar.concat(confirmNumber)
+  }
+
+  if (confirmSpecialCharacter) {
+    storingVar = storingVar.concat(specialCharacter)
+  }
+
+  var randomPassword = "";
+
+  for (var i = 0; i < passwordLength; i++) {
+    randomPassword = randomPassword + storingVar[Math.floor(Math.random() * storingVar.length)];
+  }
+  return randomPassword;
 }
